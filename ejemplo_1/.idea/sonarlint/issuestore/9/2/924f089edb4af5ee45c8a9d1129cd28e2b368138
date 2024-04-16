@@ -1,0 +1,19 @@
+
+r
+java:S1192"UDefine a constant instead of duplicating this literal "El numero mayor es: " 3 times.(•±±Ü8òØ§Ùì1
+w
+java:S1192 "UDefine a constant instead of duplicating this literal "El numero menor es: " 3 times.(ßâ»ûÿÿÿÿ8óØ§Ùì1
+}
+java:S1488*"[Immediately return this expression instead of assigning it to the temporary variable "sum".(Î¹Ÿ¢ùÿÿÿÿ8óØ§Ùì1
+7
+java:S1220""Move this file to a named package.8øØ§Ùì1
+G	java:S106"+Replace this use of System.out by a logger.(Š·Õ8•Ù§Ùì1
+L	java:S106"+Replace this use of System.out by a logger.(¸šñÙüÿÿÿÿ8–Ù§Ùì1
+G	java:S106"+Replace this use of System.out by a logger.(•±±Ü8˜Ù§Ùì1
+L	java:S106"+Replace this use of System.out by a logger.(‡ÌÊúÿÿÿÿ8›Ù§Ùì1
+G	java:S106"+Replace this use of System.out by a logger.(ĞÎŠÏ8›Ù§Ùì1
+L	java:S106 "+Replace this use of System.out by a logger.(ßâ»ûÿÿÿÿ8 Ù§Ùì1
+L	java:S106""+Replace this use of System.out by a logger.(ÉÀ«¸øÿÿÿÿ8 Ù§Ùì1
+G	java:S106$"+Replace this use of System.out by a logger.(‘ğ£”8 Ù§Ùì1
+L	java:S106/"+Replace this use of System.out by a logger.(¤·øÿÿÿÿ8¢Ù§Ùì1
+G	java:S1061"+Replace this use of System.out by a logger.(£éÍØ8¢Ù§Ùì1
