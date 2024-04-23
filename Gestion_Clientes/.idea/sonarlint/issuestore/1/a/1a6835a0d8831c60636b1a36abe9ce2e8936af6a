@@ -1,13 +1,12 @@
 
-g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8áõÍÆğ1
+g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÿÎİÈğ1
+i
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(³ÿ’ºúÿÿÿÿ8ŠÏİÈğ1
 j
-java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(ŠóŸşÿÿÿÿ8ŸÍĞÆğ1
-i	java:S100	"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İÖ¶p8÷õÍÆğ1
-^
-java:S1854"<Remove this useless assignment to local variable "conexion".(ŠóŸşÿÿÿÿ8¢ÍĞÆğ1
-O
-java:S1481"-Remove this unused "conexion" local variable.(êº„Šøÿÿÿÿ8üõÍÆğ1
+java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(ŠóŸşÿÿÿÿ8ŠÏİÈğ1
+i	java:S100
+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İÖ¶p8ÏİÈğ1
 K
-java:S2115")Add password protection to this database.(ŠóŸşÿÿÿÿ8ÿõÍÆğ1
+java:S2115")Add password protection to this database.(ŠóŸşÿÿÿÿ8•ÏİÈğ1
 O
-java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8‘óÑÆğ1
+java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8—ÏİÈğ1

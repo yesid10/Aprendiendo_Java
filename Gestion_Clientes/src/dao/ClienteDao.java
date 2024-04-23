@@ -3,6 +3,7 @@ package dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class ClienteDao {
 
@@ -19,9 +20,14 @@ public class ClienteDao {
         try {
             Class.forName(driver);
             conexion = DriverManager.getConnection(conectionURL, user, password);
+
+            String sql = "INSERT INTO `clientes` (`id`, `nombre`, `apellido`, `telefono`, `email`) VALUES (NULL, 'Yesid', 'Vanegas', '3118599554', 'dgdhsdfghjhgfhjf');";
+            Statement statement = conexion.createStatement();
+            statement.execute(sql);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+
 
     }
 }
