@@ -1,3 +1,8 @@
+package forms;
+
+import dao.ClienteDao;
+import models.Cliente;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,6 +18,7 @@ public class FormGestion {
     private JTextField txtApellido;
     private JTextField txtEmail;
     private JTextField txtTel;
+    private JButton conect;
 
     List<Cliente> array = new ArrayList<Cliente>();
     public FormGestion() {
@@ -43,7 +49,7 @@ public class FormGestion {
                 }
                 array.remove(index);
                 actualizarLista();
-                JOptionPane.showMessageDialog(null,"El Cliente " + nameSlected + " fue eliminado correctamente.");
+                JOptionPane.showMessageDialog(null,"El models.Cliente " + nameSlected + " fue eliminado correctamente.");
                 limpiarCajasDeTexto();
             }
             private void limpiarCajasDeTexto(){
@@ -51,6 +57,13 @@ public class FormGestion {
                 txtNombre.setText("");
                 txtEmail.setText("");
                 txtTel.setText("");
+            }
+        });
+        conect.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ClienteDao dao = new ClienteDao();
+                dao.Conectar();
             }
         });
     }
