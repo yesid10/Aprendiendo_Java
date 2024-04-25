@@ -1,9 +1,16 @@
 
 Q
-java:S3740"/Provide the parametrized type for this generic.(ëî Åýÿÿÿÿ8ªÖÛÆð1
+java:S3740"/Provide the parametrized type for this generic.(ëî Åýÿÿÿÿ8´Áÿ–ñ1
 L
-java:S3740H"/Provide the parametrized type for this generic.(þœ•×8«ÖÛÆð1
+java:S3740K"/Provide the parametrized type for this generic.(þœ•×8µÁÿ–ñ1
 L
-java:S3740H"/Provide the parametrized type for this generic.(þœ•×8¬ÖÛÆð1
+java:S3740K"/Provide the parametrized type for this generic.(þœ•×8¶Áÿ–ñ1
 w
-java:S1104"UMake mainPanel a static final constant or non-public and provide accessors if needed.(Ö²£¦ûÿÿÿÿ8°ÖÛÆð1
+java:S1104"UMake mainPanel a static final constant or non-public and provide accessors if needed.(Ö²£¦ûÿÿÿÿ8¶Áÿ–ñ1
+V
+java:S18540"9Remove this useless assignment to local variable "index".(žã¶¾8œ€‚—ñ1
+G
+java:S14810"*Remove this unused "index" local variable.(žã¶¾8ž€‚—ñ1
+X	java:S1252"<This block of commented-out lines of code should be removed.(Á‡Úž8Ÿ€‚—ñ1
+L
+java:S1068"*Remove this unused "conect" private field.(°áÐëûÿÿÿÿ8ÊÁÿ–ñ1

@@ -4,8 +4,9 @@ import dao.ClienteDao;
 import models.Cliente;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javax.swing.event.AncestorListener;
+import java.awt.event.*;
+import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +21,7 @@ public class FormGestion {
     private JTextField txtTel;
     private JButton conect;
 
-    List<Cliente> array = new ArrayList<Cliente>();
+
     public FormGestion() {
         btnGuardar.addActionListener(new ActionListener() {
             @Override
@@ -33,10 +34,12 @@ public class FormGestion {
                 cliente1.setEmail(txtEmail.getText());
                 cliente1.setTelefono(txtTel.getText());
 
-
-                array.add(cliente1);
+                ClienteDao dao = new ClienteDao();
+                dao.agregar(cliente1);
                 actualizarLista();
+
                 JOptionPane.showMessageDialog(null, "El cliente " + name + " se guardo correctamente.");
+
             }
         });
         btnEliminar.addActionListener(new ActionListener() {
@@ -44,10 +47,10 @@ public class FormGestion {
             public void actionPerformed(ActionEvent e) {
                 int index = listClientes.getSelectedIndex();
                 String nameSlected = "";
-                for(int i=0; i< array.size(); i++){
-                    nameSlected = String.valueOf(array.get(index));
-                }
-                array.remove(index);
+//                for(int i=0; i< array.size(); i++){
+//                    nameSlected = String.valueOf(array.get(index));
+//                }
+//                array.remove(index);
                 actualizarLista();
                 JOptionPane.showMessageDialog(null,"El models.Cliente " + nameSlected + " fue eliminado correctamente.");
                 limpiarCajasDeTexto();
@@ -59,19 +62,20 @@ public class FormGestion {
                 txtTel.setText("");
             }
         });
-        conect.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ClienteDao dao = new ClienteDao();
-                dao.Conectar();
-            }
+
+
+        mainPanel.addComponentListener(new ComponentAdapter() {
         });
     }
 
     private void actualizarLista(){
+        ClienteDao dao = new ClienteDao();
+        List<Cliente> lista = dao.listar();
+
         DefaultListModel datos= new DefaultListModel();
-        for(int i=0; i<array.size(); i++){
-            Cliente cliente = array.get(i);
+
+        for(int i=0; i<lista.size(); i++){
+            Cliente cliente = lista.get(i);
             datos.addElement(cliente.getNombreCompleto());
         }
         listClientes.setModel(datos);

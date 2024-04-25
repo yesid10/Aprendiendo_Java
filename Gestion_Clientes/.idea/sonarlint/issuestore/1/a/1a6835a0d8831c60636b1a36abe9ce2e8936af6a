@@ -1,12 +1,15 @@
 
-g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÿÎİÈğ1
+g	java:S112""FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Áç×–ñ1
+g	java:S112E"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Áç×–ñ1
 i
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(³ÿ’ºúÿÿÿÿ8ŠÏİÈğ1
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(³ÿ’ºúÿÿÿÿ8Éç×–ñ1
 j
-java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(ŠóŸşÿÿÿÿ8ŠÏİÈğ1
-i	java:S100
-"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İÖ¶p8ÏİÈğ1
+java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(ŠóŸşÿÿÿÿ8Éç×–ñ1
+i
+java:S20958"GUse try-with-resources or close this "Statement" in a "finally" clause.(³ÿ’ºúÿÿÿÿ8éãş¬ñ1
+j
+java:S20955"HUse try-with-resources or close this "Connection" in a "finally" clause.(ŠóŸşÿÿÿÿ8éãş¬ñ1
 K
-java:S2115")Add password protection to this database.(ŠóŸşÿÿÿÿ8•ÏİÈğ1
-O
-java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8—ÏİÈğ1
+java:S2115")Add password protection to this database.(ŠóŸşÿÿÿÿ8Ìç×–ñ1
+K
+java:S21155")Add password protection to this database.(ŠóŸşÿÿÿÿ8Ñç×–ñ1
