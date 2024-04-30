@@ -1,12 +1,11 @@
 package forms;
 
+import com.mysql.cj.util.StringUtils;
 import dao.ClienteDao;
 import models.Cliente;
 
 import javax.swing.*;
-import javax.swing.event.AncestorListener;
 import java.awt.event.*;
-import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,10 +18,24 @@ public class FormGestion {
     private JTextField txtApellido;
     private JTextField txtEmail;
     private JTextField txtTel;
+    private JButton btnEditar;
+    private JLabel lblid;
+    private JButton btnNuevo;
     private JButton conect;
 
+    private List<Cliente> lista = new ArrayList();
+
+    private final void limpiarCajasDeTexto(){
+        txtApellido.setText("");
+        txtNombre.setText("");
+        txtEmail.setText("");
+        txtTel.setText("");
+        lblid.setText("");
+    }
 
     public FormGestion() {
+
+
         btnGuardar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -34,43 +47,67 @@ public class FormGestion {
                 cliente1.setEmail(txtEmail.getText());
                 cliente1.setTelefono(txtTel.getText());
 
+                if(!StringUtils.isEmptyOrWhitespaceOnly(lblid.getText())){
+                    cliente1.setId(lblid.getText());
+                }
+
                 ClienteDao dao = new ClienteDao();
-                dao.agregar(cliente1);
+                dao.guardar(cliente1);
+
+
                 actualizarLista();
 
-                JOptionPane.showMessageDialog(null, "El cliente " + name + " se guardo correctamente.");
 
+                JOptionPane.showMessageDialog(null, "El cliente " + name + " se guardo correctamente.");
+                limpiarCajasDeTexto();
             }
+
+
+
         });
+
         btnEliminar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int index = listClientes.getSelectedIndex();
-                String nameSlected = "";
-//                for(int i=0; i< array.size(); i++){
-//                    nameSlected = String.valueOf(array.get(index));
-//                }
-//                array.remove(index);
+                Cliente cliente = lista.get(index);
+
+                ClienteDao dao = new ClienteDao();
+
+                dao.eliminar(cliente.getId());
+
                 actualizarLista();
-                JOptionPane.showMessageDialog(null,"El models.Cliente " + nameSlected + " fue eliminado correctamente.");
+                JOptionPane.showMessageDialog(null,"El Cliente " + cliente.getNombreCompleto() + " fue eliminado correctamente.");
                 limpiarCajasDeTexto();
             }
-            private void limpiarCajasDeTexto(){
-                txtApellido.setText("");
-                txtNombre.setText("");
-                txtEmail.setText("");
-                txtTel.setText("");
-            }
+
         });
 
 
-        mainPanel.addComponentListener(new ComponentAdapter() {
+        actualizarLista();
+
+        btnEditar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                int index = listClientes.getSelectedIndex();
+                Cliente cliente = lista.get(index);
+
+                txtNombre.setText(cliente.getNombre());
+                txtApellido.setText(cliente.getApellido());
+                txtTel.setText(cliente.getTelefono());
+                txtEmail.setText(cliente.getEmail());
+                lblid.setText(cliente.getId());
+            }
+        });
+        btnNuevo.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                limpiarCajasDeTexto();
+            }
         });
     }
 
-    private void actualizarLista(){
+    public void actualizarLista(){
         ClienteDao dao = new ClienteDao();
-        List<Cliente> lista = dao.listar();
+        lista = dao.listar();
 
         DefaultListModel datos= new DefaultListModel();
 
